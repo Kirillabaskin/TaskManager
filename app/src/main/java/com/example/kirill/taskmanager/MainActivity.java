@@ -22,9 +22,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         listView = findViewById(R.id.listView);
         List<Task> item = new ArrayList<Task>();
-        item.add(new Task("Hello"));
+        item.add(new Task(getString(R.string.first_task)));
+        item.add(new Task(getString(R.string.second_task)));
+        item.add(new Task(getString(R.string.third_task)));
         context = getApplicationContext();
         TaskAdaptor adaptor = new TaskAdaptor(context,item);
         listView.setAdapter(adaptor);
     }
+
 }

@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Switch;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -17,6 +18,7 @@ public class TaskAdaptor extends BaseAdapter {
         this.list = list;
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
+
     @Override
     public int getCount(){
         return list.size();
@@ -37,11 +39,10 @@ public class TaskAdaptor extends BaseAdapter {
         if (view == null) {
             view = layoutInflater.inflate(R.layout.item_layout, parent, false);
         }
-
         Task task=getTask(position);
 
-        Switch taskSwitch = view.findViewById(R.id.taskSwitch);
-        taskSwitch.setText(task.getTitle());
+        TextView txtTask = view.findViewById(R.id.txtTask);
+        txtTask.setText(task.getTitle());
 
         return view;
     }

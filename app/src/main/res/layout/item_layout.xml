@@ -6,12 +6,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Switch
-        android:id="@+id/taskSwitch"
-        android:layout_width="350dp"
-        android:layout_height="52dp"
-        android:text="Switch"
-        app:layout_constraintEnd_toEndOf="parent"
+    <EditText
+        android:id="@+id/txtTask"
+        android:layout_width="212dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="37dp"
+        android:layout_height="49dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
